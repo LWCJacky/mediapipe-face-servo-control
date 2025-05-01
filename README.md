@@ -10,16 +10,17 @@
 
 ---
 
-## 📂 專案架構
+## 📂 專案架構（主程式在 codeing/ 資料夾內）
 
 ```
 mediapipe-face-servo-control/
-├── rmvc.py             # 主程式：偵測 + PID + 串口傳送
-├── pid.py              # PID 控制邏輯
-├── config.ini          # 設定檔（攝影機與 PID 參數）
-├── csic.dest           # MediaPipe 模型（臉部特徵點）
-├── DynamicTable.py     # Rich 終端表格視覺化
-├── rmvc.spec           # pyinstaller 打包規格檔
+├── codeing/             # 主要程式碼目錄
+│   ├── rmvc.py          # 主程式：偵測 + PID + 串口傳送
+│   ├── pid.py           # PID 控制邏輯
+│   ├── DynamicTable.py  # Rich 表格視覺化
+│   ├── csic.dest        # MediaPipe 模型（臉部特徵點）
+│   └── config.ini       # 設定檔（攝影機與 PID）
+    
 ```
 
 ---
@@ -50,13 +51,6 @@ pip install -r requirements.txt
 ```bash
 pip install opencv-python mediapipe numpy pyserial rich
 ```
-
-產出 `requirements.txt` 的方式如下：
-
-```bash
-pip freeze > requirements.txt
-```
-
 ### 2️⃣ 編輯設定檔（config.ini）
 
 ```ini
@@ -98,7 +92,7 @@ pip install -r requirements.txt
 ### 4️⃣ 執行程式
 
 ```bash
-python rmvc.py
+python codeing/rmvc.py
 ```
 
 ---
