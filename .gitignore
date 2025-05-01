@@ -1,0 +1,26 @@
+# 忽略可執行檔
+*.exe
+
+# 忽略 pyinstaller 或 cx_Freeze 等輸出目錄
+/dist/
+codeing/dist/
+/build/
+codeing/build/
+/__pycache__/
+
+# 忽略 Python 環境
+.venv/
+env/
+*.pyc
+*.pyo
+*.pyd
+
+# 忽略 IDE 設定檔
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 忽略系統文件
+.DS_Store
+Thumbs.db
